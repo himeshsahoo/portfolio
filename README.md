@@ -1,20 +1,27 @@
-# Interactive Portfolio
+# Himesh Sahoo | AIML Portfolio
 
-A zero-dependency portfolio site built for the current workspace.
+An interactive, zero-dependency portfolio showcasing AIML projects and experience.
 
 ## Highlights
 
 - Bold full-screen hero with animated details
 - Photo panel with a fallback portrait illustration
-- Project filters, scroll progress, reveal animations, and form feedback
+- Project filters (Python, AI/ML, Desktop), scroll progress, reveal animations
+- Experience section with DRDO internship and club roles
 - Responsive layout tuned for desktop and mobile
 
 ## Using your photo
 
 The hero image loads from `assets/profile.jpg` first. If that file is not present, the page falls back to `assets/profile.svg`.
 
-To use your actual photo, place it at `assets/profile.jpg` and refresh the page.
+## Deploy
 
-## Run
+Deployed on GitHub Pages: **https://himeshsahoo.github.io/portfolio**
 
-Open `index.html` directly in a browser.
+## Run locally
+
+Open `index.html` directly in a browser, or run:
+```bash
+python -m http.server 8000
+```
+Then visit `http://localhost:8000`
