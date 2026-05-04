@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081120" />
+    <title>Himesh Sahoo | AIML Portfolio</title>
+    <meta
+      name="description"
+      content="Himesh Sahoo's interactive AIML portfolio featuring machine learning projects, deep learning work, and contact details."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="aurora aurora-left"></div>
+      <div class="aurora aurora-right"></div>
+      <div class="noise"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#home">
+          <span class="brand-mark"></span>
+          <span>Himesh Sahoo</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle accent mode">
+          <span class="toggle-dot"></span>
+          <span>Pulse</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">AIML / Python / Real-world projects</p>
+            <h1>
+              I love solving real-world problems and treat coding like puzzles.
+            </h1>
+            <p class="lede">
+              I’m Himesh Sahoo, an AIML student at SRMIST focused on Machine Learning, Deep Learning, Python, and practical applications that solve real problems.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">Explore work</a>
+              <a class="button button-secondary" href="#contact">Let’s talk</a>
+            </div>
+
+            <div class="hero-stats">
+              <article>
+                <strong data-count="6">0</strong>
+                <span>GitHub projects</span>
+              </article>
+              <article>
+                <strong data-count="1">0</strong>
+                <span>DRDO internship</span>
+              </article>
+              <article>
+                <strong data-count="4">0</strong>
+                <span>core focus areas</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="portrait-card">
+              <div class="portrait-glow"></div>
+              <img id="portrait" src="assets/profile.svg" alt="Portrait of Himesh smiling at the beach" />
+              <div class="portrait-info">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Open to collaboration</strong>
+                  <span>Machine learning, web apps, and applied AI projects</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-note note-one">ML projects</div>
+            <div class="floating-note note-two">Python work</div>
+            <div class="floating-note note-three">DRDO experience</div>
+          </div>
+        </section>
+
+        <section class="ticker" aria-label="Capabilities ticker">
+          <div class="ticker-track">
+            <span>Machine learning</span>
+            <span>Deep learning</span>
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Computer vision</span>
+            <span>Machine learning</span>
+            <span>Deep learning</span>
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Computer vision</span>
+          </div>
+        </section>
+
+        <section class="section split" id="about">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>Focused on machine learning, deep learning, and practical problem solving.</h2>
+          </div>
+          <div class="about-grid reveal">
+            <article class="panel">
+              <p>
+                I’m an AIML student at SRMIST with a strong interest in machine learning, deep learning, and building real-world applications using Python.
+              </p>
+            </article>
+            <article class="panel accent-panel">
+              <p>
+                I enjoy projects that challenge me to think logically, solve problems, and understand how AI systems work internally.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2>Real projects from my GitHub profile, grouped by the kind of problem they solve.</h2>
+          </div>
+
+          <div class="filter-bar reveal" role="tablist" aria-label="Project categories">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="python" type="button">Python</button>
+            <button class="filter" data-filter="ai" type="button">AI / ML</button>
+            <button class="filter" data-filter="desktop" type="button">Desktop</button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <article class="project-card reveal" data-category="python ai">
+              <div class="project-top">
+                <span>AI / Flask app</span>
+                <span>Python</span>
+              </div>
+              <h3>Skin Disease Classification AI</h3>
+              <p>A Flask-based deep learning app that classifies skin diseases with explainability features like Grad-CAM and lesion highlighting.</p>
+              <div class="tag-row">
+                <span>Flask</span><span>MobileNetV2</span><span>Grad-CAM</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="python ai">
+              <div class="project-top">
+                <span>Text analytics</span>
+                <span>Python</span>
+              </div>
+              <h3>Sentiment Analysis Project</h3>
+              <p>A web app that preprocesses text, trains a model, and classifies sentiment as positive, negative, or neutral.</p>
+              <div class="tag-row">
+                <span>Flask</span><span>NLP</span><span>Model training</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="python ai">
+              <div class="project-top">
+                <span>Computer vision</span>
+                <span>Python</span>
+              </div>
+              <h3>Traffic Sign Detection using YOLOv8</h3>
+              <p>A real-time traffic sign detection system with distance estimation and audio feedback for detected signs.</p>
+              <div class="tag-row">
+                <span>YOLOv8</span><span>OpenCV</span><span>Distance estimation</span>
+              </div>
+            </article>
+
+            <article class="project-card reveal" data-category="desktop">
+              <div class="project-top">
+                <span>Desktop app</span>
+                <span>Java</span>
+              </div>
+              <h3>Java Calendar</h3>
+              <p>A Swing-based social calendar for navigating months, adding appointments, and managing scheduled items.</p>
+              <div class="tag-row">
+                <span>Swing</span><span>SQL</span><span>Appointments</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section split" id="skills">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Skills aligned with machine learning, applied AI, and clean implementation.</h2>
+          </div>
+
+          <div class="skills-layout reveal">
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-meta"><span>Python</span><span>95%</span></div>
+                <div class="meter"><span style="--fill: 95%"></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Machine learning</span><span>90%</span></div>
+                <div class="meter"><span style="--fill: 90%"></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Deep learning</span><span>88%</span></div>
+                <div class="meter"><span style="--fill: 88%"></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Problem solving</span><span>82%</span></div>
+                <div class="meter"><span style="--fill: 82%"></span></div>
+              </div>
+            </div>
+
+            <div class="stack-panel panel">
+              <h3>Typical stack</h3>
+              <ul class="stack">
+                <li>Python / Flask</li>
+                <li>TensorFlow / PyTorch / OpenCV</li>
+                <li>SQL / MySQL</li>
+                <li>HTML / CSS / JavaScript for web interfaces</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section timeline-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Timeline</p>
+            <h2>A path from learning fundamentals to building applied AI projects.</h2>
+          </div>
+
+          <div class="timeline reveal">
+            <article>
+              <span>2021</span>
+              <h3>Built a technical foundation</h3>
+              <p>Focused on programming basics, logic, and problem solving as the base for larger projects.</p>
+            </article>
+            <article>
+              <span>2023</span>
+              <h3>Started applied ML work</h3>
+              <p>Moved into machine learning, deep learning, and web-based project development in Python.</p>
+            </article>
+            <article>
+              <span>2026</span>
+              <h3>Growing through research and projects</h3>
+              <p>Completed a DRDO internship and kept shipping practical projects while sharpening my portfolio.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section experience-section" id="experience">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Internships and leadership roles where I grew my skills.</h2>
+          </div>
+
+          <div class="experience-grid reveal">
+            <article class="experience-card panel">
+              <div class="experience-header">
+                <h3>Intern</h3>
+                <p class="company">DRDO, Centre for Airborne Systems</p>
+              </div>
+              <div class="experience-details">
+                <p class="duration">Jun 2025 · 1 month</p>
+                <p class="location">Bengaluru, Karnataka, India · On-site</p>
+              </div>
+              <div class="experience-skills">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+              </div>
+              <p class="experience-desc">Worked on advanced computer vision and machine learning projects with India's Defence Research and Development Organisation.</p>
+            </article>
+
+            <article class="experience-card panel">
+              <div class="experience-header">
+                <h3>Creative Associate & Creative Member</h3>
+                <p class="company">Coding Ninjas 10x SRM</p>
+              </div>
+              <div class="experience-roles">
+                <div class="role">
+                  <p class="role-title">Creative Associate</p>
+                  <p class="duration">Oct 2025 – May 2026 · 8 mos · On-site</p>
+                </div>
+                <div class="role">
+                  <p class="role-title">Creative Member</p>
+                  <p class="duration">Oct 2024 – Oct 2025 · 1 yr 1 mo · Full-time</p>
+                </div>
+              </div>
+              <p class="location">Chennai, Tamil Nadu, India</p>
+              <p class="experience-desc">Led creative initiatives and built community at SRM's premier coding club, mentoring students and organizing coding competitions and workshops.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Open to internships, collaborations, and AI/ML opportunities.</h2>
+          </div>
+
+          <div class="contact-grid reveal">
+            <form class="contact-card panel" id="contactForm">
+              <label>
+                Name
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" placeholder="Tell me about the project" required></textarea>
+              </label>
+              <button class="button button-primary" type="submit">Send message</button>
+              <p class="form-status" id="formStatus" aria-live="polite"></p>
+            </form>
+
+            <aside class="panel contact-side">
+              <h3>Make it personal</h3>
+              <p>
+                I’m open to opportunities where I can keep learning, collaborate with others, and build useful AI systems.
+              </p>
+              <div class="contact-points">
+                <div>
+                  <span>Email</span>
+                  <strong>himesh.sahoo10@gmail.com</strong>
+                </div>
+                <div>
+                  <span>LinkedIn</span>
+                  <strong>linkedin.com/in/himesh-sahoo-1234abcd</strong>
+                </div>
+                <div>
+                  <span>GitHub</span>
+                  <strong>github.com/himeshsahoo</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollBar"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
