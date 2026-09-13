@@ -634,6 +634,114 @@ main {
   border: 1px solid var(--border);
 }
 
+/* Publications Section */
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+}
+
+.publication-card {
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.publication-authors {
+  color: var(--text-main);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.publication-venue {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.publication-links {
+  margin-top: auto;
+}
+
+/* Achievements & Certifications Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.achievement-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.achievement-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.achievement-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.achievement-info p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cert-card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cert-card h4 {
+  font-size: 1.2rem;
+}
+
+.cert-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.cert-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  margin-top: 8px;
+}
+
+.cert-link:hover {
+  color: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Skills Section */
 .skills-grid {
   display: grid;
