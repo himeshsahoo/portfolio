@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030712" />
+    <title>Himesh Sahoo | AIML Portfolio</title>
+    <meta
+      name="description"
+      content="Himesh Sahoo's interactive AIML portfolio featuring machine learning projects, deep learning work, and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Background Effects -->
+    <div class="glow-bg">
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <div class="page-shell">
+      <header class="topbar glass">
+        <a class="brand" href="#home">
+          <div class="brand-logo">H</div>
+          <span>Himesh Sahoo</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle accent mode">
+          <span class="toggle-icon"></span>
+          <span>Hyper Mode</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-content reveal">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              <span>Available for internships & collaboration</span>
+            </div>
+            <h1>
+              Building Intelligent <br />
+              <span class="text-gradient">Systems & AI</span> Solutions.
+            </h1>
+            <p class="lede">
+              I’m Himesh Sahoo, an AIML student at SRMIST focused on Machine Learning, Deep Learning, Python, and practical applications that solve real-world problems.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#work">
+                View My Work
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a class="btn btn-secondary" href="#contact">Let’s Talk</a>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card glass hover-card">
+                <h3 data-count="6">0</h3>
+                <p>GitHub Projects</p>
+              </div>
+              <div class="stat-card glass hover-card">
+                <h3 data-count="1">0</h3>
+                <p>DRDO Internship</p>
+              </div>
+              <div class="stat-card glass hover-card">
+                <h3 data-count="4">0</h3>
+                <p>Core Focus Areas</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal delay-1">
+            <div class="portrait-container hover-3d">
+              <div class="portrait-ring"></div>
+              <img id="portrait" src="assets/profile.jpg" alt="Himesh Sahoo" onerror="this.src='assets/profile.svg'" />
+              
+              <div class="floating-badge badge-1 glass">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Deep Learning</span>
+              </div>
+              <div class="floating-badge badge-2 glass">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>Python Dev</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ticker" aria-label="Capabilities ticker">
+          <div class="ticker-content">
+            <div class="ticker-track">
+              <!-- Repeated items for infinite scroll -->
+              <span><span class="ticker-dot"></span> Machine Learning</span>
+              <span><span class="ticker-dot"></span> Deep Learning</span>
+              <span><span class="ticker-dot"></span> Python</span>
+              <span><span class="ticker-dot"></span> Flask</span>
+              <span><span class="ticker-dot"></span> Computer Vision</span>
+              <span><span class="ticker-dot"></span> NLP</span>
+              <span><span class="ticker-dot"></span> TensorFlow</span>
+              <span><span class="ticker-dot"></span> Machine Learning</span>
+              <span><span class="ticker-dot"></span> Deep Learning</span>
+              <span><span class="ticker-dot"></span> Python</span>
+              <span><span class="ticker-dot"></span> Flask</span>
+              <span><span class="ticker-dot"></span> Computer Vision</span>
+              <span><span class="ticker-dot"></span> NLP</span>
+              <span><span class="ticker-dot"></span> TensorFlow</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-header reveal">
+            <span class="section-subtitle">About Me</span>
+            <h2 class="section-title">Driven by data, <br/><span class="text-gradient">inspired by impact.</span></h2>
+          </div>
+          
+          <div class="about-grid reveal">
+            <div class="about-card glass hover-card">
+              <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3>The Mission</h3>
+              <p>I’m an AIML student at SRMIST with a strong interest in machine learning, deep learning, and building real-world applications using Python.</p>
+            </div>
+            <div class="about-card glass highlight-card hover-card">
+               <div class="card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3>The Approach</h3>
+              <p>I enjoy projects that challenge me to think logically, solve problems, and understand how AI systems work internally from the ground up.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <div class="section-header text-center reveal">
+            <span class="section-subtitle">Portfolio</span>
+            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            <p class="section-desc">Real-world applications built to solve complex problems.</p>
+          </div>
+
+          <div class="filter-tabs reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai">AI / ML</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="desktop">Desktop</button>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass hover-3d reveal" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/skin-diseases-classification" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">AI / Flask App</span>
+                </div>
+                <h3 class="project-title">Skin Disease Classification AI</h3>
+                <p class="project-desc">A Flask-based deep learning app that classifies skin diseases with explainability features like Grad-CAM and lesion highlighting.</p>
+                <div class="project-tags">
+                  <span>Flask</span><span>MobileNetV2</span><span>Grad-CAM</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card glass hover-3d reveal delay-1" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/DocMentorAI" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">Generative AI</span>
+                </div>
+                <h3 class="project-title">DocMentorAI</h3>
+                <p class="project-desc">An AI-powered document mentoring assistant that utilizes LLMs to analyze and extract information from complex documents.</p>
+                <div class="project-tags">
+                  <span>Python</span><span>LLM</span><span>AI</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass hover-3d reveal" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/traffic-sign-detection-using-yolo-v8" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">Computer Vision</span>
+                </div>
+                <h3 class="project-title">YOLOv8 Traffic Sign Detection</h3>
+                <p class="project-desc">A real-time traffic sign detection system with distance estimation and audio feedback for detected signs.</p>
+                <div class="project-tags">
+                  <span>YOLOv8</span><span>OpenCV</span><span>Python</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card glass hover-3d reveal delay-1" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/RAG" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">AI / RAG System</span>
+                </div>
+                <h3 class="project-title">Retrieval-Augmented Generation (RAG)</h3>
+                <p class="project-desc">A scalable system to retrieve relevant documents and augment language model generation, reducing hallucination and improving factual accuracy.</p>
+                <div class="project-tags">
+                  <span>Python</span><span>RAG</span><span>NLP</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card glass hover-3d reveal" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/beauty-scoring-system" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">Computer Vision</span>
+                </div>
+                <h3 class="project-title">Beauty Scoring System</h3>
+                <p class="project-desc">An automated facial beauty scoring application using modern computer vision and deep learning architectures to extract aesthetic features.</p>
+                <div class="project-tags">
+                  <span>Python</span><span>OpenCV</span><span>Deep Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card glass hover-3d reveal delay-1" data-category="ai python">
+              <div class="project-content">
+                <div class="project-header">
+                  <div class="project-links">
+                    <a href="https://github.com/himeshsahoo/APT-forecast" class="icon-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                  </div>
+                  <span class="project-type">Machine Learning</span>
+                </div>
+                <h3 class="project-title">APT Forecast</h3>
+                <p class="project-desc">A time-series and predictive machine learning model for forecasting Advanced Persistent Threats (APTs) to aid cybersecurity defense measures.</p>
+                <div class="project-tags">
+                  <span>Python</span><span>Machine Learning</span><span>Forecasting</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Expertise</span>
+            <h2 class="section-title">Technical <span class="text-gradient">Arsenal</span></h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skills-bars reveal">
+              <div class="skill-item">
+                <div class="skill-info"><span>Python</span><span class="skill-percent">95%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--target-width: 95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Machine Learning</span><span class="skill-percent">90%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--target-width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Deep Learning</span><span class="skill-percent">88%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--target-width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Computer Vision</span><span class="skill-percent">85%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--target-width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Generative AI / RAG</span><span class="skill-percent">80%</span></div>
+                <div class="progress-bar"><div class="progress-fill" style="--target-width: 80%"></div></div>
+              </div>
+            </div>
+
+            <div class="tech-stack glass hover-card reveal delay-1">
+              <h3>Core Technologies</h3>
+              <div class="stack-list">
+                <div class="stack-item">
+                  <div class="stack-icon">🐍</div>
+                  <div>
+                    <h4>Languages</h4>
+                    <p>Python, Java, JavaScript, SQL</p>
+                  </div>
+                </div>
+                <div class="stack-item">
+                  <div class="stack-icon">🧠</div>
+                  <div>
+                    <h4>AI / ML Frameworks</h4>
+                    <p>TensorFlow, PyTorch, Scikit-Learn, OpenCV</p>
+                  </div>
+                </div>
+                <div class="stack-item">
+                  <div class="stack-icon">🤖</div>
+                  <div>
+                    <h4>Generative AI & NLP</h4>
+                    <p>LLMs, RAG, Transformers, Prompt Engineering</p>
+                  </div>
+                </div>
+                <div class="stack-item">
+                  <div class="stack-icon">🌐</div>
+                  <div>
+                    <h4>Web & Databases</h4>
+                    <p>Flask, HTML/CSS, MySQL</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="publications">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Research</span>
+            <h2 class="section-title">Academic <span class="text-gradient">Publications</span></h2>
+          </div>
+          
+          <div class="publications-grid">
+            <div class="publication-card glass hover-3d reveal lightbox-trigger" data-img="assets/publication-img.jpg">
+              <div class="cert-img-wrapper">
+                <img src="assets/publication-img.jpg" alt="Certificate of Appreciation" class="cert-preview-img" />
+                <div class="cert-overlay">
+                  <span>View Certificate</span>
+                </div>
+              </div>
+              <div class="cert-content">
+                <h3 class="publication-title">A Systematic Framework for Adapting Deep Learning Architectures from Single to Multi-Regime Operating Conditions in Remaining Useful Life Prediction</h3>
+                <p class="publication-authors">Himesh Sahoo</p>
+                <p class="publication-venue">12th International Conference on Communication and Signal Processing (ICCSP), April 2026</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="experience">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Journey</span>
+            <h2 class="section-title">Experience & <span class="text-gradient">Roles</span></h2>
+          </div>
+
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content glass hover-card">
+                <div class="timeline-date">Jun 2025 · 1 month</div>
+                <h3 class="timeline-title">Research Intern</h3>
+                <h4 class="timeline-company">DRDO, Centre for Airborne Systems</h4>
+                <p class="timeline-desc">Worked on advanced computer vision and machine learning projects with India's Defence Research and Development Organisation.</p>
+                <div class="timeline-tags">
+                  <span>Computer Vision</span><span>Machine Learning</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content glass hover-card">
+                <div class="timeline-date">Oct 2024 – May 2026</div>
+                <h3 class="timeline-title">Creative Associate</h3>
+                <h4 class="timeline-company">Coding Ninjas 10x SRM</h4>
+                <p class="timeline-desc">Led creative initiatives and built community at SRM's premier coding club, mentoring students and organizing coding competitions and workshops.</p>
+                <div class="timeline-tags">
+                  <span>Leadership</span><span>Mentorship</span><span>Event Organization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="achievements">
+          <div class="section-header reveal">
+            <span class="section-subtitle">Milestones</span>
+            <h2 class="section-title">Certifications & <span class="text-gradient">Achievements</span></h2>
+          </div>
+          
+          <div class="achievements-grid">
+            <div class="achievement-showcase reveal lightbox-trigger" data-img="assets/hackathon-certificate.jpg">
+              <div class="cert-img-wrapper">
+                <img src="assets/hackathon-certificate.jpg" alt="Hackathon Second Prize" class="achievement-img glass hover-3d" />
+                <div class="cert-overlay"><span>View Certificate</span></div>
+              </div>
+              <div class="achievement-info">
+                <h3>2nd Prize in PENTATHON 2.0 - DATATHON 2.0</h3>
+                <p>Organized by NextGen AI at SRMIST (March 19-21, 2025)</p>
+              </div>
+            </div>
+            
+            <div class="certifications-list reveal delay-1">
+              <div class="cert-card glass hover-3d lightbox-trigger" data-img="assets/nvidia-img.jpg">
+                <div class="cert-img-wrapper">
+                  <img src="assets/nvidia-img.jpg" alt="NVIDIA Certificate" class="cert-preview-img" />
+                  <div class="cert-overlay"><span>View Certificate</span></div>
+                </div>
+                <div class="cert-content">
+                  <h4>Building LLM Applications With Prompt Engineering</h4>
+                  <p>NVIDIA Certificate of Competency (Nov 2025)</p>
+                </div>
+              </div>
+              <div class="cert-card glass hover-3d lightbox-trigger delay-1" data-img="assets/coursera-img.jpg">
+                <div class="cert-img-wrapper">
+                  <img src="assets/coursera-img.jpg" alt="Coursera Certificate" class="cert-preview-img" />
+                  <div class="cert-overlay"><span>View Certificate</span></div>
+                </div>
+                <div class="cert-content">
+                  <h4>AI Python for Beginners</h4>
+                  <p>DeepLearning.AI via Coursera (Jul 2025)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="contact-container glass reveal">
+            <div class="contact-info">
+              <span class="section-subtitle">Get in touch</span>
+              <h2 class="section-title">Let's build something <span class="text-gradient">amazing</span> together.</h2>
+              <p class="contact-desc">I’m open to opportunities where I can keep learning, collaborate with others, and build useful AI systems.</p>
+              
+              <div class="contact-methods">
+                <a href="mailto:himesh.sahoo10@gmail.com" class="method-card hover-card">
+                  <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                  <div class="method-details">
+                    <span>Email</span>
+                    <strong>himesh.sahoo10@gmail.com</strong>
+                  </div>
+                </a>
+                <a href="https://linkedin.com/in/himesh-sahoo-1234abcd" class="method-card hover-card">
+                  <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
+                  <div class="method-details">
+                    <span>LinkedIn</span>
+                    <strong>linkedin.com/in/himeshsahoo</strong>
+                  </div>
+                </a>
+                <a href="https://github.com/himeshsahoo" class="method-card hover-card">
+                  <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></div>
+                  <div class="method-details">
+                    <span>GitHub</span>
+                    <strong>github.com/himeshsahoo</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+              <input type="hidden" name="access_key" value="8ac9923e-11c5-483a-99a8-c9832c83736b">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-full">Send Message <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+        </section>
+      </main>
+      
+      <footer class="footer text-center">
+        <p>&copy; 2026 Himesh Sahoo. Built with passion & AI.</p>
+      </footer>
+    </div>
+
+    <div class="scroll-progress"><div class="scroll-bar" id="scrollBar"></div></div>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-close" id="lightboxClose">&times;</div>
+      <img src="" alt="Fullscreen Certificate" class="lightbox-img" id="lightboxImg" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
