@@ -340,12 +340,17 @@
           </div>
           
           <div class="publications-grid">
-            <div class="publication-card glass hover-card reveal">
-              <h3 class="publication-title">A Systematic Framework for Adapting Deep Learning Architectures from Single to Multi-Regime Operating Conditions in Remaining Useful Life Prediction</h3>
-              <p class="publication-authors">Himesh Sahoo</p>
-              <p class="publication-venue">12th International Conference on Communication and Signal Processing (ICCSP), April 2026</p>
-              <div class="publication-links">
-                <a href="assets/publication-iccsp-2026.pdf" target="_blank" class="btn btn-sm btn-secondary">Certificate of Appreciation</a>
+            <div class="publication-card glass hover-3d reveal lightbox-trigger" data-img="assets/publication-img.jpg">
+              <div class="cert-img-wrapper">
+                <img src="assets/publication-img.jpg" alt="Certificate of Appreciation" class="cert-preview-img" />
+                <div class="cert-overlay">
+                  <span>View Certificate</span>
+                </div>
+              </div>
+              <div class="cert-content">
+                <h3 class="publication-title">A Systematic Framework for Adapting Deep Learning Architectures from Single to Multi-Regime Operating Conditions in Remaining Useful Life Prediction</h3>
+                <p class="publication-authors">Himesh Sahoo</p>
+                <p class="publication-venue">12th International Conference on Communication and Signal Processing (ICCSP), April 2026</p>
               </div>
             </div>
           </div>
@@ -395,8 +400,11 @@
           </div>
           
           <div class="achievements-grid">
-            <div class="achievement-showcase reveal">
-              <img src="assets/hackathon-certificate.jpg" alt="Hackathon Second Prize" class="achievement-img glass hover-3d" />
+            <div class="achievement-showcase reveal lightbox-trigger" data-img="assets/hackathon-certificate.jpg">
+              <div class="cert-img-wrapper">
+                <img src="assets/hackathon-certificate.jpg" alt="Hackathon Second Prize" class="achievement-img glass hover-3d" />
+                <div class="cert-overlay"><span>View Certificate</span></div>
+              </div>
               <div class="achievement-info">
                 <h3>2nd Prize in PENTATHON 2.0 - DATATHON 2.0</h3>
                 <p>Organized by NextGen AI at SRMIST (March 19-21, 2025)</p>
@@ -404,15 +412,25 @@
             </div>
             
             <div class="certifications-list reveal delay-1">
-              <div class="cert-card glass hover-card">
-                <h4>Building LLM Applications With Prompt Engineering</h4>
-                <p>NVIDIA Certificate of Competency (Nov 2025)</p>
-                <a href="assets/nvidia-certificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+              <div class="cert-card glass hover-3d lightbox-trigger" data-img="assets/nvidia-img.jpg">
+                <div class="cert-img-wrapper">
+                  <img src="assets/nvidia-img.jpg" alt="NVIDIA Certificate" class="cert-preview-img" />
+                  <div class="cert-overlay"><span>View Certificate</span></div>
+                </div>
+                <div class="cert-content">
+                  <h4>Building LLM Applications With Prompt Engineering</h4>
+                  <p>NVIDIA Certificate of Competency (Nov 2025)</p>
+                </div>
               </div>
-              <div class="cert-card glass hover-card">
-                <h4>AI Python for Beginners</h4>
-                <p>DeepLearning.AI via Coursera (Jul 2025)</p>
-                <a href="assets/coursera-certificate.pdf" target="_blank" class="cert-link">View Certificate</a>
+              <div class="cert-card glass hover-3d lightbox-trigger delay-1" data-img="assets/coursera-img.jpg">
+                <div class="cert-img-wrapper">
+                  <img src="assets/coursera-img.jpg" alt="Coursera Certificate" class="cert-preview-img" />
+                  <div class="cert-overlay"><span>View Certificate</span></div>
+                </div>
+                <div class="cert-content">
+                  <h4>AI Python for Beginners</h4>
+                  <p>DeepLearning.AI via Coursera (Jul 2025)</p>
+                </div>
               </div>
             </div>
           </div>
@@ -478,6 +496,12 @@
 
     <div class="scroll-progress"><div class="scroll-bar" id="scrollBar"></div></div>
     
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-close" id="lightboxClose">&times;</div>
+      <img src="" alt="Fullscreen Certificate" class="lightbox-img" id="lightboxImg" />
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

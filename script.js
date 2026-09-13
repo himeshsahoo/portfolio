@@ -184,4 +184,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Lightbox Modal ---
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxTriggers = document.querySelectorAll('.lightbox-trigger');
+
+  if (lightbox && lightboxImg && lightboxClose) {
+    lightboxTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const imgSrc = trigger.getAttribute('data-img');
+        if (imgSrc) {
+          lightboxImg.src = imgSrc;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
 });
