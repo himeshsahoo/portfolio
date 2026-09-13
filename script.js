@@ -13,6 +13,27 @@ const isTouch = () =>
   ('ontouchstart' in window);
 
 /* ------------------------------------------------
+   THEME — persisted choice with system fallback
+   ------------------------------------------------ */
+(function initTheme() {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const metaTheme = document.querySelector('meta[name="theme-color"]');
+
+  function applyTheme(theme, persist = true) {
+    root.dataset.theme = theme;
+    if (persist) localStorage.setItem('portfolio-theme', theme);
+    if (metaTheme) metaTheme.setAttribute('content', theme === 'dark' ? '#171310' : '#f6f1eb');
+    toggle?.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+  }
+
+  applyTheme(root.dataset.theme || 'light', false);
+  toggle?.addEventListener('click', () => {
+    applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+  });
+})();
+
+/* ------------------------------------------------
    NAV — scroll-aware border + mobile burger
    ------------------------------------------------ */
 (function initNav() {
@@ -279,6 +300,48 @@ const isTouch = () =>
 (function initSkills() {
   const pills = gsap.utils.toArray('.skill-pill');
   const logos = gsap.utils.toArray('.slogo');
+  const trackWrapper = document.getElementById('skillsTrackWrapper');
+
+  if (trackWrapper) {
+    let isDragging = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+
+    trackWrapper.addEventListener('wheel', (event) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      const canScroll = trackWrapper.scrollWidth > trackWrapper.clientWidth;
+      if (!canScroll) return;
+      event.preventDefault();
+      trackWrapper.scrollLeft += event.deltaY;
+    }, { passive: false });
+
+    trackWrapper.addEventListener('pointerdown', (event) => {
+      isDragging = true;
+      startX = event.clientX;
+      startScrollLeft = trackWrapper.scrollLeft;
+      trackWrapper.classList.add('is-dragging');
+      trackWrapper.setPointerCapture(event.pointerId);
+    });
+
+    trackWrapper.addEventListener('pointermove', (event) => {
+      if (!isDragging) return;
+      trackWrapper.scrollLeft = startScrollLeft - (event.clientX - startX);
+    });
+
+    const stopDragging = () => {
+      isDragging = false;
+      trackWrapper.classList.remove('is-dragging');
+    };
+
+    trackWrapper.addEventListener('pointerup', stopDragging);
+    trackWrapper.addEventListener('pointercancel', stopDragging);
+    trackWrapper.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') trackWrapper.scrollLeft += 160;
+      if (event.key === 'ArrowLeft') trackWrapper.scrollLeft -= 160;
+    });
+    trackWrapper.setAttribute('tabindex', '0');
+    trackWrapper.setAttribute('aria-label', 'Scrollable technical skills');
+  }
 
   if (isTouch()) {
     // Mobile: simple enter-once fade
@@ -517,6 +580,27 @@ const isTouch = () =>
   closeBtn?.addEventListener('click', close);
   lightbox?.addEventListener('click', e => { if (e.target === lightbox) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
+
+/* =====================================================
+   CONTACT FORM — mail client handoff for static hosting
+   ===================================================== */
+(function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const name = String(data.get('name') || '').trim();
+    const email = String(data.get('email') || '').trim();
+    const message = String(data.get('message') || '').trim();
+    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Hi Himesh,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`
+    );
+    window.location.href = `mailto:himesh.sahoo10@gmail.com?subject=${subject}&body=${body}`;
+  });
 })();
 
 /* =====================================================

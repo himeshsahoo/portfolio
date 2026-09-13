@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080a0f" />
+  <meta name="theme-color" content="#f6f1eb" />
   <title>Himesh Sahoo — AI/ML Engineer</title>
   <meta name="description" content="Himesh Sahoo is an AI/ML engineer and researcher at SRMIST, specializing in deep learning, computer vision, and generative AI systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <script>
+    (() => {
+      const saved = localStorage.getItem('portfolio-theme');
+      const theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#171310' : '#f6f1eb');
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -24,6 +32,10 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="https://github.com/himeshsahoo" target="_blank" rel="noopener" class="nav-cta">GitHub ↗</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
     <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
       <span></span><span></span>
     </button>
@@ -48,23 +60,37 @@
       <div class="hero-glow hero-glow-1"></div>
       <div class="hero-glow hero-glow-2"></div>
 
-      <div class="hero-content" id="heroContent">
-        <div class="hero-eyebrow" id="heroEyebrow">
-          <span class="dot-pulse"></span>
-          Available for internships &amp; collaboration
+      <div class="hero-inner">
+        <div class="hero-content" id="heroContent">
+          <div class="hero-eyebrow" id="heroEyebrow">
+            <span class="dot-pulse"></span>
+            Available for internships &amp; collaboration
+          </div>
+          <h1 class="hero-title" id="heroTitle">
+            <span class="hero-line" id="heroLine1">Building</span>
+            <span class="hero-line hero-line-accent" id="heroLine2">Intelligent</span>
+            <span class="hero-line" id="heroLine3">Systems.</span>
+          </h1>
+          <p class="hero-sub" id="heroSub">
+            I'm Himesh Sahoo — AI/ML engineer, researcher, and SRMIST student.
+            I build systems that see, understand, and reason.
+          </p>
+          <div class="hero-actions" id="heroActions">
+            <a href="#projects" class="btn btn-primary">See my work</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch →</a>
+          </div>
         </div>
-        <h1 class="hero-title" id="heroTitle">
-          <span class="hero-line" id="heroLine1">Building</span>
-          <span class="hero-line hero-line-accent" id="heroLine2">Intelligent</span>
-          <span class="hero-line" id="heroLine3">Systems.</span>
-        </h1>
-        <p class="hero-sub" id="heroSub">
-          I'm Himesh Sahoo — AI/ML engineer, researcher, and SRMIST student.
-          I build systems that see, understand, and reason.
-        </p>
-        <div class="hero-actions" id="heroActions">
-          <a href="#projects" class="btn btn-primary">See my work</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch →</a>
+
+        <div class="hero-portrait" id="heroPortrait">
+          <div class="portrait-ring"></div>
+          <div class="portrait-ring portrait-ring-2"></div>
+          <img src="assets/profile.jpg" alt="Himesh Sahoo" class="portrait-img" />
+          <div class="portrait-badge badge-top">
+            <span>🧠</span> Deep Learning
+          </div>
+          <div class="portrait-badge badge-bottom">
+            <span>🔬</span> DRDO Researcher
+          </div>
         </div>
       </div>
 
@@ -127,13 +153,18 @@
           <div class="proj-img-wrap">
             <div class="proj-img-bg proj-bg-2"></div>
             <div class="proj-mockup">
-              <div class="mockup-screen">
+              <div class="mockup-screen apt-mockup">
                 <div class="mockup-bar"></div>
                 <div class="mockup-content">
-                  <div class="mockup-chat">
-                    <div class="chat-bubble user">Explain this document...</div>
-                    <div class="chat-bubble ai">Based on the document, the key findings are...</div>
-                    <div class="chat-bubble user">Summarize section 3</div>
+                  <div class="apt-header">
+                    <span>APT FORECAST</span><strong>LIVE</strong>
+                  </div>
+                  <div class="apt-chart">
+                    <i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="apt-metrics">
+                    <span><b>87%</b> risk score</span>
+                    <span><b>24h</b> forecast</span>
                   </div>
                 </div>
               </div>
@@ -143,12 +174,12 @@
         <div class="proj-text" id="projText2">
           <span class="proj-num">02</span>
           <span class="proj-tag">Generative AI / LLM</span>
-          <h3 class="proj-title">DocMentor<br/>AI</h3>
-          <p class="proj-desc">An AI-powered document mentoring assistant that leverages LLMs to analyze, extract, and explain complex documents with conversational intelligence.</p>
+          <h3 class="proj-title">APT<br/>Forecast</h3>
+          <p class="proj-desc">A time-series predictive model that forecasts Advanced Persistent Threat activity, helping security teams spot emerging attack patterns before they escalate.</p>
           <div class="proj-tech">
-            <span>Python</span><span>LLMs</span><span>RAG</span><span>NLP</span>
+            <span>Python</span><span>Time Series</span><span>Scikit-Learn</span><span>Cybersecurity</span>
           </div>
-          <a href="https://github.com/himeshsahoo/DocMentorAI" target="_blank" class="proj-link">View on GitHub →</a>
+          <a href="https://github.com/himeshsahoo/APT-forecast" target="_blank" rel="noopener" class="proj-link">View on GitHub →</a>
         </div>
       </div>
     </div>
@@ -452,6 +483,24 @@
           github.com/himeshsahoo
         </a>
       </div>
+      <form class="contact-form" id="contactForm">
+        <div class="contact-form-row">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Jane Smith" required />
+          </label>
+          <label>
+            <span>Email address</span>
+            <input type="email" name="email" autocomplete="email" placeholder="jane@example.com" required />
+          </label>
+        </div>
+        <label>
+          <span>How can I help?</span>
+          <textarea name="message" rows="4" placeholder="Tell me about the project or opportunity..." required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        <p class="form-note">This opens your email app with the details ready to send.</p>
+      </form>
     </div>
     <footer class="site-footer">
       <p>© 2026 Himesh Sahoo. Built with precision &amp; GSAP.</p>
