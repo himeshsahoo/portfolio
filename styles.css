@@ -1823,10 +1823,10 @@ body {
   padding-top: clamp(100px, 14vw, 180px);
 }
 .contact-inner {
-  max-width: 1120px;
+  max-width: 1240px;
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
-  gap: clamp(40px, 8vw, 110px);
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 500px);
+  gap: clamp(56px, 9vw, 140px);
   align-items: start;
 }
 .contact-inner > .label-tag,
@@ -1836,8 +1836,18 @@ body {
 .contact-inner > .contact-form {
   grid-column: 2;
   grid-row: 1 / span 5;
+  width: 100%;
+  min-width: 0;
+  align-self: start;
+  justify-self: end;
 }
-.contact-heading { font-size: clamp(3rem, 6vw, 6.8rem); text-transform: uppercase; }
+.contact-heading {
+  max-width: 650px;
+  min-width: 0;
+  font-size: clamp(3rem, 5.3vw, 6rem);
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
 .contact-links { gap: 10px; }
 .contact-link-card {
   max-width: 100%;
@@ -1886,6 +1896,7 @@ body {
   .nav { top: 10px; }
   .nav-logo::after { display: none; }
   .contact-inner { display: flex; flex-direction: column; }
+  .contact-heading { max-width: 720px; }
   .contact-form { width: 100%; }
 }
 
